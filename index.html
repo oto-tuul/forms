@@ -13,13 +13,31 @@
         <span class="error" aria-live="polite"></span>
         <label for="country"><span>*</span>Country:</label>
         <input id="country" type="text" required />
+        <span class="error" aria-live="polite"></span>
         <label for="zip-code"><span>*</span>Zip Code:</label>
-        <input id="zip-code" type="number" required />
+        <input id="zip-code" type="number" min="111111" required />
+        <span class="error" aria-live="polite"></span>
         <div>
           <label for="pw"><span>*</span>Password:</label>
-          <input id="pw" type="text" required />
+          <input
+            id="pw"
+            type="text"
+            minlength="8"
+            maxlength="16"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*/()_+])"
+            required
+          />
+          <span class="error" aria-live="polite"></span>
           <label for="pwc"><span>*</span>Confirm Password:</label>
-          <input id="pwc" type="text" required />
+          <input
+            id="pwc"
+            type="text"
+            required
+            minlength="8"
+            maxlength="16"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*/()_+])"
+          />
+          <span class="error" aria-live="polite"></span>
         </div>
         <button id="submitBtn">Submit</button>
       </form>
