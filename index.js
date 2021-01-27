@@ -52,7 +52,7 @@ pwc.addEventListener('input', (event) => {
     pwcError.textContent = '';
     pwcError.className = 'error';
   } else {
-    pwc.validity.valid = false;
+    event.preventDefault();
     showPwcError();
   }
 });
@@ -74,7 +74,7 @@ form.addEventListener('submit', (event) => {
     showPwError();
     event.preventDefault();
   }
-  if (!pwc.validity.valid) {
+  if (!pwc.validity.valid || pw.value !== pwc.value) {
     showPwcError();
     event.preventDefault();
   }

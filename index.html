@@ -19,24 +19,10 @@
         <span class="error" aria-live="polite"></span>
         <div>
           <label for="pw"><span>*</span>Password:</label>
-          <input
-            id="pw"
-            type="text"
-            minlength="8"
-            maxlength="16"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*/()_+])"
-            required
-          />
+          <input id="pw" type="text" minlength="8" maxlength="16" required />
           <span class="error" aria-live="polite"></span>
           <label for="pwc"><span>*</span>Confirm Password:</label>
-          <input
-            id="pwc"
-            type="text"
-            required
-            minlength="8"
-            maxlength="16"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*/()_+])"
-          />
+          <input id="pwc" type="text" required minlength="8" maxlength="16" />
           <span class="error" aria-live="polite"></span>
         </div>
         <button id="submitBtn">Submit</button>
